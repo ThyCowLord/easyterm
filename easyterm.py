@@ -62,22 +62,23 @@ if command == "package":
 	if debianorarch != ("arch", "debian"):
 		print("I'm sorry, that's invalid")
 		os.system("python3 easyterm.py")
-	choice1 = input("Would you like to remove or install a package?")
-	remove1 = "remove"
-	install1 = "install"
-	if choice1 not in [remove1, install1]:
-		print("I'm sorry, that's not an option.")
-		os.system("python3 package.py")
-	if choice1 == remove1:
-		remove = input("What package would you like to remove? ")
-		packremove = "sudo pacman -Rsc "+remove
-		os.system(packremove)
-	if choice1 == install1:
-		install = input("What package would you like to install?")
-		packinstall = "sudo pacman -S "+install
-		os.system(packinstall)
+	else:
+		choice1 = input("Would you like to remove or install a package?")
+		remove1 = "remove"
+		install1 = "install"
+		if choice1 not in [remove1, install1]:
+			print("I'm sorry, that's not an option.")
+			os.system("python3 package.py")
+		if choice1 == remove1:
+			remove = input("What package would you like to remove? ")
+			packremove = "sudo pacman -Rsc "+remove
+			os.system(packremove)
+		if choice1 == install1:
+			install = input("What package would you like to install?")
+			packinstall = "sudo pacman -S "+install
+			os.system(packinstall)
 	
-	os.system("python3 easyterm.py")
+		os.system("python3 easyterm.py")
 
 if command == "custom command":
 	command = input("What command would you like to execute?") 
