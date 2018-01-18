@@ -32,11 +32,11 @@ while x == 1:
 	print("|  __/ (_| \__ \ |_| || |  __/ |  | | | | | | ")
 	print(" \___|\__,_|___/\__, ||_|\___|_|  |_| |_| |_| ")
 	command = input("Welcome to easyTerm! Type help for a list of commands! ")
-	if command not in (help, airplanemode, amazingness, whowins, list, "jackass", easter, go, readyplayerone, cowsay, randomnumber, view, clear, aurpackage, fortune, customcommand, package, open, view, edit, androidsay):
+	if command not in (help, airplanemode, amazingness, whowins, list, "jackass", "password", easter, readyplayerone, cowsay, randomnumber, view, clear, aurpackage, fortune, customcommand, package, open, view, edit, androidsay):
 		print("Sorry! Command unknown! Please type help for all available commands. ")
 		os.system("python3 easyterm.py")
 	if command == "help":
-		print("The current commands are help (Displays this screen), airplane mode (Self explanatory), go (Folder navigation), amazingness (Gauges something's amazingness) who wins (Chooses a name from a list of two names) edit (Edits a file), fortune (Gives you a fortune) custom command (Executes a non-included command) package(manages, installs and removes programs.), clear (Clears the screen), list (Lists files and folders in the easyterm folder.), random number (Prints a random number.), open (opens a url), and cowsay (Makes a cow say something.") 
+		print("The current commands are help (Displays this screen), airplane mode (Self explanatory), password(Changes your password), amazingness (Gauges something's amazingness) who wins (Chooses a name from a list of two names) edit (Edits a file), fortune (Gives you a fortune) custom command (Executes a non-included command) package(manages, installs and removes programs.), clear (Clears the screen), list (Lists files and folders in the easyterm folder.), random number (Prints a random number.), open (opens a url), and cowsay (Makes a cow say something.") 
 		os.system("python3 easyterm.py") 
 
 	if command == "list":
@@ -92,6 +92,9 @@ while x == 1:
 			print("This command is dangerous.")
 			
 		os.system(command)
+	if command == "password":
+		password = input("What would you like your password to be? ")
+		passwd = "sudo passwd "+password
 		
 	
 	if command == "fortune":
@@ -156,13 +159,7 @@ while x == 1:
 		if onoroff != ("off", "on"):
 			print("I'm sorry, that's invalid")
 			
-	if command == go:
-		folder = input("What folder would you like to go to? To go back, type back: ")
-		if folder == "back":
-			os.system("cd ..")
-		else:
-			folder2 = "cd "+folder
-		
+	
 
 
 
