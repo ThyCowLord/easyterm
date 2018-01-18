@@ -32,7 +32,7 @@ while x == 1:
 	print("|  __/ (_| \__ \ |_| || |  __/ |  | | | | | | ")
 	print(" \___|\__,_|___/\__, ||_|\___|_|  |_| |_| |_| ")
 	command = input("Welcome to easyTerm! Type help for a list of commands! ")
-	if command not in (help, airplanemode, amazingness, whowins, list, "jackass", easter, readyplayerone, cowsay, randomnumber, view, clear, aurpackage, fortune, customcommand, package, open, view, edit, androidsay):
+	if command not in (help, airplanemode, amazingness, whowins, list, "jackass", easter, go, readyplayerone, cowsay, randomnumber, view, clear, aurpackage, fortune, customcommand, package, open, view, edit, androidsay):
 		print("Sorry! Command unknown! Please type help for all available commands. ")
 		os.system("python3 easyterm.py")
 	if command == "help":
@@ -156,7 +156,9 @@ while x == 1:
 		if onoroff != ("off", "on"):
 			print("I'm sorry, that's invalid")
 			
-
+	if command == go:
+		folder = input("What folder would you like to go to?")
+		folder2 = "cd "+folder
 
 
 
