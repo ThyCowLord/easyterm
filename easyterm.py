@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 import os 
 import random
 import sys
@@ -24,6 +24,8 @@ package = "package"
 go = "go"
 open = "open"
 view = "edit"
+def main():
+	os.system("python3 easyterm.py")
 print("                     _____                  ") 
 print("  ___  __ _ ___ _   |_   _|__ _ __ _ __ ___ ") 
 print(" / _ \/ _` / __| | | || |/ _ \ '__| '_ ` _ \ ") 
@@ -39,27 +41,27 @@ if command == "help":
 
 if command == "list":
 	os.system("ls")
-	os.system("python3 easyterm.py")
+	main()
 if command == "cowsay":
 	subcommand = input("What would you like the cow to say?")
 	os.system("cowsay " + subcommand)
-	os.system("python3 easyterm.py")
+	main()
 	
 if command == "random number":
 	random = random.randint(1, 1000000)
 	print(random)
-	os.system("python3 easyterm.py")
+	main()
 
 if command == "clear":
 	os.system("clear")
-	os.system("python3 easyterm.py")
+	main()
 if command == "package":
 	debianorarch = input("Are you using debian or arch linux?")
 	if debianorarch == "debian":
 		package = input("What package would you like to install? ")
 		install = "sudo apt-get install "+package
 		os.system(install)
-		os.system("python3 easyterm.py")
+		main()
 	if debianorarch != ("arch", "debian"):
 		print("I'm sorry, that's invalid")
 		os.system("python3 easyterm.py")
@@ -79,38 +81,38 @@ if command == "package":
 			packinstall = "sudo pacman -S "+install
 			os.system(packinstall)
 	
-		os.system("python3 easyterm.py")
+		main()
 
 if command == "custom command":
 	command = input("What command would you like to execute?") 
 	if command == "sudo rm -rf /":
 		print("This command is dangerous.")
-		os.system("python3 easyterm.py")
+		main()
 	if command == "sudo chmod -R 777":
 		print("This command is dangerous.")
-		os.system("python3 easyterm.py")
+		main()
 	os.system(command)
-	os.system("python3 easyterm.py")
+	main()
 
 if command == "fortune":
 	os.system("fortune")
-	os.system("python3 easyterm.py")
+	main()
 if command == "open":
 	web = input("What URL would you like to view? ")
 	url = "xdg-open " + web
 	os.system(url)
-	os.system("python3 easyterm.py")
+	main()
 if command == "view":
 	cat = input("What file would you like to view? ")
 	command = "cat "+cat
 	os.system(command)
-	os.system("python3 easyterm.py")
+	main()
 
 if command == "edit":
 	command = input("What file would you like to edit? ")
 	nano = "nano "+command
 	os.system(nano)
-	os.system("python3 easyterm.py")
+	main()
 
 if command == "exit":
 	exit("Thanks for using easyTerm!")
@@ -121,39 +123,39 @@ if command == "jackass":
 
 if command == "ready player one":
 	print("Nice! You found THE easter egg! You now have half a billion dollars and full control of the OASIS! Also, best line from the Ready Player One trailer: 'If you are seeing this, I'm dead.' - James Halliday.")
-	os.system("python3 easyterm.py")
+	main()
 if command == easter:
 	print("Haha. You thought this was an easter egg.")
-	os.system("python3 easyterm.py")
+	main()
 
 if command == "aurpackage":
 	choice1 = input("What package would you like to install? ")
 	install = "yaourt "+choice1
 	os.system(install)
-	os.system("python3 easyterm.py")
+	main()
 if command == "who wins":
 	name1 = input("Put in two names, and this program will select who is better. Enter the first name here: ")
 	name2 = input("Enter the second name here: ")
 	names = [name1, name2]
 	choice = random.choice(names)
 	print(choice)
-	os.system("python3 easyterm.py")
+	main()
 if command == amazingness:
 	amazing = input("This tool will gauge something's awesomeness in a percentage. Enter something here: ")
 	randomamazing = random.randint(1, 100)
 	print("This thing... is", randomamazing, "percent amazing!")
-	os.system("python3 easyterm.py")
+	main()
 if command == airplanemode:
 	onoroff = input("Would you like airplane mode to be turned on, or off? ")
 	if onoroff == "on":
 		os.system("sudo rfkill block all")
-		os.system("python3 easyterm.py")
+		main()
 	if onoroff == "off":
 		os.system("sudo rfkill unblock all")
-		os.system("python3 easyterm.py")
+		main()
 	if onoroff != ("off", "on"):
 		print("I'm sorry, that's invalid")
-		os.system("python3 easyterm.py")
+		main()
 
 
 
