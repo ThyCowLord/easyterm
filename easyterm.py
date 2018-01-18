@@ -59,7 +59,7 @@ if command == "package":
 		install = "sudo apt-get install "+package
 		os.system(install)
 		os.system("python3 easyterm.py")
-	if debianorarch != ("arch", "debian")
+	if debianorarch != ("arch", "debian"):
 		print("I'm sorry, that's invalid")
 		os.system("python3 easyterm.py")
 	choice1 = input("Would you like to remove or install a package?")
