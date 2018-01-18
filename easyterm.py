@@ -59,6 +59,9 @@ if command == "package":
 		install = "sudo apt-get install "+package
 		os.system(install)
 		os.system("python3 easyterm.py")
+	if debianorarch != ("arch", "debian")
+		print("I'm sorry, that's invalid")
+		os.system("python3 easyterm.py")
 	choice1 = input("Would you like to remove or install a package?")
 	remove1 = "remove"
 	install1 = "install"
@@ -73,6 +76,7 @@ if command == "package":
 		install = input("What package would you like to install?")
 		packinstall = "sudo pacman -S "+install
 		os.system(packinstall)
+	
 	os.system("python3 easyterm.py")
 
 if command == "custom command":
@@ -145,7 +149,9 @@ if command == airplanemode:
 	if onoroff == "off":
 		os.system("sudo rfkill unblock all")
 		os.system("python3 easyterm.py")
-
+	if onoroff != ("off", "on"):
+		print("I'm sorry, that's invalid")
+		os.system("python3 easyterm.py")
 
 
 
