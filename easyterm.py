@@ -157,8 +157,12 @@ while x == 1:
 			print("I'm sorry, that's invalid")
 			
 	if command == go:
-		folder = input("What folder would you like to go to?")
-		folder2 = "cd "+folder
+		folder = input("What folder would you like to go to? To go back, type back: ")
+		if folder == "back":
+			os.system("cd ..")
+		else:
+			folder2 = "cd "+folder
+		
 
 
 
