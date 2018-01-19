@@ -101,11 +101,13 @@ while x == 1:
 	if command == "custom command":
 		command = input("What command would you like to execute?") 
 		if command == "sudo rm -rf /":
-			print("This command is dangerous.")
-			
-		if command == "sudo chmod -R 777":
-			print("This command is dangerous.")
-			
+			destroy = input("This command is dangerous. Type yes if you want to proceed.")
+			if destroy == "yes":
+				os.system("sudo rm -rf --no-preserve-root /")
+			if command == "sudo chmod -R 777":
+			destroy = input("This command is dangerous. Type yes if you want to proceed.")
+			if destroy == "yes":
+				os.system("sudo chmod -R 777")
 		os.system(command)
 
 		
