@@ -56,14 +56,12 @@ while x == 1:
 		os.system("ls")
 		
 	if command == "cowsay":
-		cowsaycheck = shutil.which("cowsay")
-		if cowsaycheck == "None":
-			print("Please install cowsay.")
-			os.system("sudo pacman -S cowsay")
-		else:
+		try:
 			subcommand = input("What would you like the cow to say?")
 			os.system("cowsay " + subcommand)
-		
+		except OSError as e:
+			print("Please install cowsay")
+			os.system("sudo pacman -S cowsay")
 	
 	if command == "random number":
 		random = random.randint(1, 1000000)
@@ -114,13 +112,11 @@ while x == 1:
 		
 	
 	if command == "fortune":
-		fortunecheck = shutil.which("fortune")
-		if fortunecheck == "None":
-			print("Please install fortune.")
-			os.system("sudo pacman -S fortune")
-		else:
+		try:
 			os.system("fortune")
-		
+		except OSError as e:
+			print("Please install cfortune")
+			os.system("sudo pacman -S fortune")
 	if command == "open":
 		web = input("What URL would you like to view? ")
 		url = "xdg-open " + web
