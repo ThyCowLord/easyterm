@@ -81,7 +81,7 @@ while x == 1:
 		if debianorarch != ("arch", "debian"):
 			print("I'm sorry, that's invalid")
 			os.system("python3 easyterm.py")
-		else:
+		if debianorarch == "arch":
 			choice1 = input("Would you like to remove or install a package?")
 			remove1 = "remove"
 			install1 = "install"
