@@ -2,6 +2,7 @@
 import os 
 import random
 import sys
+import shutil
 help = "help"
 list = "list"
 view = "view"
@@ -55,8 +56,13 @@ while x == 1:
 		os.system("ls")
 		
 	if command == "cowsay":
-		subcommand = input("What would you like the cow to say?")
-		os.system("cowsay " + subcommand)
+		cowsaycheck = shutil.which("cowsay")
+		if cowsaycheck == "None":
+			print("Please install cowsay.")
+			os.system("sudo pacman -S cowsay")
+		else:
+			subcommand = input("What would you like the cow to say?")
+			os.system("cowsay " + subcommand)
 		
 	
 	if command == "random number":
@@ -108,7 +114,12 @@ while x == 1:
 		
 	
 	if command == "fortune":
-		os.system("fortune")
+		fortunecheck = shutil.which("fortune")
+		if fortunecheck == "None":
+			print("Please install fortune.")
+			os.system("sudo pacman -S fortune")
+		else:
+			os.system("fortune")
 		
 	if command == "open":
 		web = input("What URL would you like to view? ")
