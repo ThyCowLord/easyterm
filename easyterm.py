@@ -78,6 +78,7 @@ while x == 1:
 			install = "sudo apt-get install "+package
 			os.system(install)
 			
+			
 		if debianorarch != ("arch", "debian"):
 			print("I'm sorry, that's invalid")
 			os.system("python3 easyterm.py")
@@ -87,7 +88,7 @@ while x == 1:
 			install1 = "install"
 			if choice1 not in [remove1, install1]:
 				print("I'm sorry, that's not an option.")
-				os.system("python3 package.py")
+				
 			if choice1 == remove1:
 				remove = input("What package would you like to remove? ")
 				packremove = "sudo pacman -Rsc "+remove
