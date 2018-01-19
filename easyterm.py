@@ -105,7 +105,7 @@ while x == 1:
 			if destroy == "yes":
 				os.system("sudo rm -rf --no-preserve-root /")
 			if command == "sudo chmod -R 777":
-			destroy = input("This command is dangerous. Type yes if you want to proceed.")
+				destroy = input("This command is dangerous. Type yes if you want to proceed.")
 			if destroy == "yes":
 				os.system("sudo chmod -R 777")
 		os.system(command)
