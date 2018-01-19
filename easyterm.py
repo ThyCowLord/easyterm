@@ -36,7 +36,7 @@ while x == 1:
 		print("Sorry! Command unknown! Please type help for all available commands. ")
 		os.system("python3 easyterm.py")
 	if command == "help":
-		print("The current commands are help (Displays this screen), 
+		print("The current commands are help (Displays this screen") 
 		print("airplane mode (Self explanatory)")
 		print("amazingness (Gauges something's amazingness)")
 		print("who wins (Chooses a name from a list of two names)")
