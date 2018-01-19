@@ -36,8 +36,20 @@ while x == 1:
 		print("Sorry! Command unknown! Please type help for all available commands. ")
 		os.system("python3 easyterm.py")
 	if command == "help":
-		print("The current commands are help (Displays this screen), airplane mode (Self explanatory), amazingness (Gauges something's amazingness) who wins (Chooses a name from a list of two names) edit (Edits a file), fortune (Gives you a fortune) custom command (Executes a non-included command) package(manages, installs and removes programs.), clear (Clears the screen), list (Lists files and folders in the easyterm folder.), random number (Prints a random number.), open (opens a url), and cowsay (Makes a cow say something.") 
-		os.system("python3 easyterm.py") 
+		print("The current commands are help (Displays this screen), 
+		print("airplane mode (Self explanatory)")
+		print("amazingness (Gauges something's amazingness)")
+		print("who wins (Chooses a name from a list of two names)")
+		print("edit (Edits a file)")
+		print("fortune (Gives you a fortune)")
+		print("custom command (Executes a non-included command)")
+		print("package(manages, installs and removes programs.)") 
+		print("clear (Clears the screen)")
+		print("list (Lists files and folders in the easyterm folder.)")
+		print("random number (Prints a random number.)")
+		print("open (opens a url)")
+		print("cowsay (Makes a cow say something.)") 
+		
 
 	if command == "list":
 		os.system("ls")
