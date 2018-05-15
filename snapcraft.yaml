@@ -1,0 +1,18 @@
+name: easyterm
+version: git
+summary: Easyterm
+description: |
+  Easyterm is software meant to help less experienced Linux users use the command line with a friendly interface.
+
+grade: stable
+confinement: strict
+
+apps:
+  offlineimap:
+    command: bin/easyterm
+
+parts:
+  offlineimap:
+    plugin: python
+    python-version: python3
+    source: .
