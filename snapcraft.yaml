@@ -8,11 +8,11 @@ grade: stable
 confinement: strict
 
 apps:
-  offlineimap:
+  easyterm:
     command: bin/easyterm
 
 parts:
-  offlineimap:
+  easyterm:
     plugin: python
     python-version: python3
     source: .
